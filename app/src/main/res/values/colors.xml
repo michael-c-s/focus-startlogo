@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="themeColor">#000000</color>
+
+    <color name="black">#000000</color>
+    <color name="blackColor">#000</color>
+    <color name="whiteColor">#fff</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteNew">#FFFFFF</color>
+
+    <color name="colorPrimary">#EF6C00</color>
+    <color name="colorPrimaryDark">#EF6C00</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="appThemeColor">#EF6C00</color>
+    <color name="appThemeColor11">#0433ff</color>
+    <color name="demo_dark_transparent">#24000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteTransparent">#4AFCFAFA</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackDim">#5E000000</color>
+    <color name="colorBlackTrans">#74474646</color>
+    <color name="colorRed">#D83A3A</color>
+    <color name="colorRedDark">#CF0C0C</color>
+    <color name="colorRedTransparent12">#B5D83A3A</color>
+    <color name="colorRedDim">#B7D83A3A</color>
+    <color name="colorRedTransparent">#BFD83A3A</color>
+    <color name="colorPink">#52E91E63</color>
+    <!--     <color name="colorPinkHot">#ff2e96</color> -->
+    <color name="colorPinkHot">#ff8ac4</color>
+    <color name="colorGray">#999C9C9C</color>
+    <color name="colorGrayNew">#4F9C9C9C</color>
+    <color name="colorGray1">#289C9C9C</color>
+    <color name="colorBlue">#38ACEC</color>
+    <color name="colorBlueTransparent">#2F38ACEC</color>
+    <color name="whiteGray">#E9E6E6</color>
+    <color name="colorWki">#74FAF9F9</color>
+    <color name="colorGreen">#7559DF59</color>
+    <color name="colorGreen1">#BF6BC96B</color>
+    <color name="colorGreenDark">#13B113</color>
+    <color name="pendingColor">#BFE2B83A</color>
+    <color name="approvedColor">#9E4DCA4D</color>
+    <color name="declinedColor">#C44242</color>
+    <color name="view_color">#D3D2D2</color>
+    <color name="offWhite">#BFE7E5E5</color>
+    <color name="offWhiteNew">#FBFCFC</color>
+    <color name="white_transparent">#2AFFFFFF</color>
+    <color name="dark_grey">#9A9A9A</color>
+    <color name="light_grey">#E2E2E2</color>
+    <color name="grey">#c4c0c0</color>
+    <color name="off_white">#f9f5f5</color>
+    <color name="readNotiColor">#E2C7CF</color>
+    <color name="blueColor">#246490</color>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="wordsReadScores">
+
+        <item>N</item>      <!-- N-->
+        <item>0</item>      <!-- 0-->
+        <item>1–10</item>       <!-- 1-->
+        <item>11–20</item>      <!-- 2-->
+        <item>21–30</item>      <!-- 3-->
+        <item>31–40</item>      <!-- 4-->
+        <item>41–50</item>      <!-- 5-->
+        <item>51–60</item>      <!-- 6-->
+        <item>61–70</item>      <!-- 7-->
+        <item>71–80+</item>     <!-- 8-->
+
+    </string-array>
+
+    <string-array name="ComprehensionLevelArr">
+        <item>Age 5 to 6 Comprehension</item>      <!-- 5/6-->
+        <item>Age 6 to 7 Comprehension</item>      <!-- 6/7-->
+        <item>Age 7 to 8 Comprehension</item>      <!-- 7/8-->
+        <item>Age 8 to 9 Comprehension</item>      <!-- 8/9-->
+        <item>Age 9 to 10 Comprehension</item>      <!-- 9/10-->
+        <item>Age 10 to 11 Comprehension</item>      <!-- 10/11-->
+
+    </string-array>
+
+    <string-array name="ComprehensionLevelArray">
+        <item>Reading Age 5 to 6</item>      <!-- 5 to 6  ->1 -->
+        <item>Reading Age 6 to 7</item>      <!-- 6 to 7  ->2-->
+        <item>Reading Age 7 to 8</item>      <!-- 7 to 8  ->3-->
+        <item>Reading Age 8 to 9</item>      <!-- 8 to 9  ->4-->
+        <item>Reading Age 9 to 10</item>      <!-- 9 to 10  ->5-->
+        <item>Reading Age 10 to 11</item>      <!-- 10 to 11  ->6-->
+
+    </string-array>
+
+</resources>

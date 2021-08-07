@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/bank_width_stories"
+    android:layout_height="@dimen/bank_height"
+    android:layout_gravity="top"
+    android:background="@drawable/frame"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_4dp">
+
+    <LinearLayout
+        android:id="@+id/stories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="@dimen/bank_width_stories"
+            android:layout_height="wrap_content"
+            android:tag="t1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_56sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="@dimen/bank_width_stories"
+            android:layout_height="wrap_content"
+            android:tag="t2"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_56sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="@dimen/bank_width_stories"
+            android:layout_height="wrap_content"
+            android:tag="t3"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_80sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/logosLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_4dp"
+            android:src="@drawable/pg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_4dp"
+            android:src="@drawable/ei" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/funx" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/logosLL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_4dp"
+            android:src="@drawable/ges" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ssf" />
+
+    </LinearLayout>
+
+</LinearLayout>

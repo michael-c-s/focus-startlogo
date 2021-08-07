@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pic"
+    android:orientation="vertical"
+    tools:context=".Activity.LoginActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48dp"
+        android:background="@color/colorBlack">
+
+        <ImageView
+            android:id="@+id/loginBack_ids"
+            android:layout_width="@dimen/margin_48dp"
+            android:layout_height="@dimen/margin_48dp"
+            android:padding="@dimen/margin_10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AssessByPhone Log In"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_18sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:gravity="center_vertical|end"
+        android:text="@string/login_prompt"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/txt_size_18sp" />
+
+    <EditText
+        android:id="@+id/identityField"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@null"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="@dimen/margin_8dp"
+        android:gravity="start|center"
+        android:hint="Enter UTN"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/whiteColor"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="@dimen/txt_size_18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@color/light_grey" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:gravity="center_vertical|end"
+        android:text="@string/password_prompt"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/txt_size_18sp" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@null"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="@dimen/margin_8dp"
+        android:gravity="start|center"
+        android:hint="Enter password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/whiteColor"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="@dimen/txt_size_18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@color/light_grey" />
+
+    <CheckBox
+        android:id="@+id/showPassCheck_ids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:buttonTint="@color/colorWhite"
+        android:text="Show password"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_36dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_56dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@drawable/btn_border_white"
+        android:foreground="@drawable/my_ripple"
+        android:text="@string/login_text"
+        android:textAllCaps="false"
+        android:textColor="@color/blackColor" />
+
+</LinearLayout>

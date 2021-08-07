@@ -1,0 +1,3448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pic"
+    tools:context=".Activity.PostLoginRecordMathsResultsManagerActivity">
+
+    <FrameLayout
+        android:id="@+id/topLay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48dp"
+        android:background="@color/colorBlack">
+
+        <ImageView
+            android:id="@+id/resultBack_ids"
+            android:layout_width="@dimen/margin_48dp"
+            android:layout_height="@dimen/margin_48dp"
+            android:padding="@dimen/margin_10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Result"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_18sp" />
+
+        <LinearLayout
+            android:id="@+id/logoutLay_ids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/margin_8dp">
+
+            <ImageView
+                android:id="@+id/logout_ids"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Logout"
+                android:textColor="@color/whiteColor" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLay"
+        android:layout_below="@+id/topLay"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/resultsViewForPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlackDim"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:text="Choose your student:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_36dp"
+                android:layout_marginStart="@dimen/margin_2dp"
+                android:layout_marginEnd="@dimen/margin_2dp"
+                android:background="@drawable/spinner_border_white">
+
+                <Spinner
+                    android:id="@+id/studentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_2dp" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:text="Term:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/readingTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/readingTerm1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/readingTerm2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/readingTerm3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Level 1"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1.1 Counting objects to 10:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/counting_objects_to_10_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/counting_objects_to_10_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_objects_to_10_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_objects_to_10_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_objects_to_10_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_objects_to_10_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1.2 Identify number to 10:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_number_to_10_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_10_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_10_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_10_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_10_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_10_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1.3 Identify greatest number to 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_greatest_number_to_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1.4 Counting in ones – missing numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/counting_in_ones_missing_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/counting_in_ones_missing_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_ones_missing_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_ones_missing_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_ones_missing_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1.5 Add numbers to 10:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/add_numbers_to_10_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_10_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_10_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_10_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_10_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_10_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1.6 Subtract numbers to 10:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/subtract_numbers_to_10_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_10_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_10_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_10_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_10_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_10_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Level 2"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.1 Identify number to 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_number_to_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.2 Identify greatest number to 50:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_greatest_number_to_50_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_50_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_50_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_50_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_50_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_50_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.3 Counting in tens – missing numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/counting_in_tens_missing_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/counting_in_tens_missing_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_tens_missing_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_tens_missing_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_tens_missing_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.4 Add numbers to 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/add_numbers_to_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_numbers_to_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.5 Subtract numbers to 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/subtract_numbers_to_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_numbers_to_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.6 Multiply 1-digit numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/multiply_1_digit_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_numbers_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2.7 Divide 2-digit by 1-digit numbers to 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/divide_2_digit_by_1_digit_numbers_to_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/divide_1_digit_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_1_digit_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Level 3"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.1 Identify number to 99:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_number_to_99_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_99_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_99_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_99_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_99_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_99_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.2 Identify greatest number to 150:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_greatest_number_to_150_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_150_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_150_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_150_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_150_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_150_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.3 Counting in twos and fives – missing numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/counting_in_2s_5s_missing_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/counting_in_2s_5s_missing_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_2s_5s_missing_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_2s_5s_missing_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_2s_5s_missing_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.4 Add two 2-digit numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/add_two_2_digit_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/add_two_2_digit_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_2_digit_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_2_digit_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_2_digit_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_2_digit_numbers_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.5 Subtract 1-digit from 2-digits to 99:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/subtract_1_digit_from_2_digits_to_99_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subtract_1_digit_from_2_digits_to_99_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_1_digit_from_2_digits_to_99_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_1_digit_from_2_digits_to_99_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_1_digit_from_2_digits_to_99_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_1_digit_from_2_digits_to_99_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.6 Multiply 1-digit by 2-digit numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/multiply_1_digit_by_2_digit_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_by_2_digit_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_by_2_digit_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_by_2_digit_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_by_2_digit_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_1_digit_by_2_digit_numbers_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3.7 Divide 2-digit by 1-digit numbers over 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/divide_2_digit_by_1_digit_numbers_over_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_over_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_over_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_over_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_over_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_over_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Level 4"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.1 Identify number to 999:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_number_to_999_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_999_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_999_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_999_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_999_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_999_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.2 Identify greatest number to 1,100:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_greatest_number_to_1100_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_1100_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_1100_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_1100_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_1100_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_1100_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.3 Counting in 3s, 4s, 6s, 7s, 8s, 9s – missing numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/counting_in_3s_4s_6s_7s_8s_9s_missing_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/counting_in_3s_4s_6s_7s_8s_9s_missing_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_3s_4s_6s_7s_8s_9s_missing_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_3s_4s_6s_7s_8s_9s_missing_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_3s_4s_6s_7s_8s_9s_missing_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/myRadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.4 Add 2- and 3-digit numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/add_two_and_three_digit_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.5 Subtract 2-digit from 2-digits:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/subtract_2_digit_from_2_digits_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_2_digits_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_2_digits_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_2_digits_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_2_digits_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_2_digits_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/myRadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.6 Multiply 2-digit by 2-digit numbers to 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/multiply_2_digit_by_2_digit_numbers_to_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_to_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_to_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_to_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_to_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_to_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4.7 Divide 2-digit by 1-digit numbers to 99:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/divide_2_digit_by_1_digit_numbers_to_99_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_99_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_99_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_99_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_99_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_digit_by_1_digit_numbers_to_99_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Level 5"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.1 Identify number to 9,999,999:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_number_to_9999999_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_9999999_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_9999999_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_9999999_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_9999999_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_number_to_9999999_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.2 Identify greatest number to 9,999:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/identify_greatest_number_to_9999_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_9999_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_9999_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_9999_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_9999_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/identify_greatest_number_to_9999_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.3 Counting in various – missing numbers:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/counting_in_various_missing_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/counting_in_various_missing_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_various_missing_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_various_missing_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/counting_in_various_missing_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.4 Add two 3-digit numbers including decimals:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/add_two_and_three_digit_numbers_include_decimals_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_include_decimals_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_include_decimals_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_include_decimals_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_include_decimals_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/add_two_and_three_digit_numbers_include_decimals_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.5 Subtract 2-digit from 3-digits including decimals:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/subtract_2_digit_from_3_digits_including_decimals_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_3_digits_including_decimails_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_3_digits_including_decimails_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_3_digits_including_decimails_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_3_digits_including_decimails_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtract_2_digit_from_3_digits_including_decimails_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.6 Multiply 2-digit by 2-digit numbers over 20:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/multiply_2_digit_by_2_digit_numbers_over_20_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_over_20_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_over_20_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_over_20_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_over_20_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiply_2_digit_by_2_digit_numbers_over_20_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="5.7 Divide 2- and 3-digit numbers by 2:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/divide_2_and_3_digit_by_2_digit_numbers_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/divide_2_and_3_digit_by_2_digit_numbers_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_and_3_digit_by_2_digit_numbers_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_and_3_digit_by_2_digit_numbers_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_and_3_digit_by_2_digit_numbers_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/divide_2_and_3_digit_by_2_digit_numbers_result3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/numbers_subtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Numbers Subtotal: "
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Word Problems"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Choose word problem level:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_36dp"
+                android:layout_marginStart="@dimen/margin_2dp"
+                android:background="@drawable/spinner_border_white">
+
+                <FrameLayout
+                    android:id="@+id/currentStatusLay_ids"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_36dp"
+                    android:elevation="@dimen/margin_36dp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="@dimen/margin_4dp" />
+
+                <TextView
+                    android:id="@+id/currentStatusTv_ids"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="@dimen/border_1dp"
+                    android:layout_marginEnd="@dimen/margin_36dp"
+                    android:layout_marginBottom="@dimen/border_1dp"
+                    android:background="@color/blackColor"
+                    android:elevation="@dimen/margin_4dp"
+                    android:gravity="start|center"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:text="N"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="1) Addition:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/addition_result_ids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/addition_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/addition_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/addition_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/addition_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="2) Subtraction:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/subtraction_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subtraction_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtraction_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtraction_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/subtraction_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="3) Multiplication:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/multiplication_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/multiplication_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiplication_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiplication_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/multiplication_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="4) Division:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/division_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/division_resultN"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="N"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/division_result0"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="0"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/division_result1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                    <RadioButton
+                        android:id="@+id/division_result2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_22sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/words_subtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Words Subtotal: "
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <TextView
+                android:id="@+id/overall_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_4dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:text="Overall Total: "
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_22sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/menuProgressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/bottomLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_8dp">
+
+        <Button
+            android:id="@+id/saveResultsButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_36dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_border_white"
+            android:foreground="@drawable/my_ripple"
+            android:text="Save Results"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/txt_size_18sp" />
+
+        <Button
+            android:id="@+id/printResultsButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_36dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_border_white2"
+            android:foreground="@drawable/my_ripple"
+            android:text="Print Results"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_size_18sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

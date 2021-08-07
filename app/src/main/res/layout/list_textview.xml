@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listTextView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_4dp"
+    android:background="@drawable/spinner_border_white_design2"
+    android:gravity="start|center"
+    android:paddingStart="@dimen/margin_8dp"
+    android:paddingTop="@dimen/margin_4dp"
+    android:paddingEnd="@dimen/margin_2dp"
+    android:paddingBottom="@dimen/margin_4dp"
+    android:textColor="@color/colorWhite"
+    android:textSize="@dimen/txt_size_20sp" />

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/bank_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/frame"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_2dp">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="@dimen/bank_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_12dp"
+        android:tag="t1"
+        android:text=""
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/txt_size_36sp" />
+
+    <com.assessbyphone.zambia.ImageLibrary.SmartImageView
+        android:id="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:tag="i1" />
+
+    <TextView
+        android:layout_width="@dimen/bank_width"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/txt_size_36sp" />
+
+    <TextView
+        android:layout_width="@dimen/bank_width"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/txt_size_36sp" />
+
+    <TextView
+        android:layout_width="@dimen/bank_width"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/txt_size_36sp" />
+
+    <TextView
+        android:layout_width="@dimen/bank_width"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/txt_size_36sp" />
+
+</LinearLayout>

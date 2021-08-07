@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingStart="@dimen/margin_16dp"
+    android:paddingLeft="@dimen/dp16"
+    android:paddingEnd="@dimen/margin_16dp"
+    android:paddingRight="@dimen/dp16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_marginBottom="@dimen/dp4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_4dp"
+                android:layout_marginRight="@dimen/dp4"
+                android:text="@string/app_name"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_marginLeft="@dimen/dp4"
+                android:text="@string/registration_page_name"
+                android:textSize="@dimen/txt_size_22sp" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginBottom="@dimen/dp4">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginEnd="@dimen/margin_4dp"
+                    android:layout_marginRight="@dimen/dp4"
+                    android:gravity="center_vertical|end"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:paddingRight="@dimen/dp4"
+                    android:text="@string/email_field_prompt"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <EditText
+                    android:id="@+id/emailField"
+                    android:layout_width="@dimen/dp144"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginStart="@dimen/margin_4dp"
+                    android:layout_marginLeft="@dimen/dp4"
+                    android:gravity="center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginEnd="@dimen/margin_4dp"
+                    android:layout_marginRight="@dimen/dp4"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="@dimen/dp4"
+                    android:text="@string/name_field_prompt"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <EditText
+                    android:id="@+id/nameField"
+                    android:layout_width="@dimen/dp144"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginStart="@dimen/margin_4dp"
+                    android:layout_marginLeft="@dimen/dp4"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp48"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginEnd="@dimen/margin_4dp"
+                    android:layout_marginRight="@dimen/dp4"
+                    android:gravity="center_vertical|end"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:paddingRight="@dimen/dp4"
+                    android:text="@string/password_field_prompt"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <EditText
+                    android:id="@+id/passwordField"
+                    android:layout_width="@dimen/dp144"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginStart="@dimen/margin_4dp"
+                    android:layout_marginLeft="@dimen/dp4"
+                    android:gravity="center_vertical"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginEnd="@dimen/margin_4dp"
+                    android:layout_marginRight="@dimen/dp4"
+                    android:gravity="center_vertical|end"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:paddingRight="@dimen/dp4"
+                    android:text="@string/utn_field_prompt"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <EditText
+                    android:id="@+id/utnField"
+                    android:layout_width="@dimen/dp144"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_marginStart="@dimen/margin_4dp"
+                    android:layout_marginLeft="@dimen/dp4"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="@dimen/dp144"
+            android:layout_height="@dimen/dp48"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp4"
+            android:height="@dimen/dp40"
+            android:text="@string/register_text"
+            android:textSize="@dimen/txt_size_18sp" />
+
+    </LinearLayout>
+
+</ScrollView>

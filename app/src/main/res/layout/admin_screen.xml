@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pic"
+    android:orientation="vertical"
+    tools:context=".Activity.AdminActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48dp"
+        android:background="@color/colorBlack">
+
+        <ImageView
+            android:id="@+id/adminBack_ids"
+            android:layout_width="@dimen/margin_48dp"
+            android:layout_height="@dimen/margin_48dp"
+            android:padding="@dimen/margin_10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="== Student Admin =="
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_20sp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_8dp">
+
+            <LinearLayout
+                android:id="@+id/student_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:text="Student list:"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_36dp"
+                    android:layout_marginStart="@dimen/margin_2dp"
+                    android:layout_marginEnd="@dimen/margin_2dp"
+                    android:background="@drawable/spinner_border_white">
+
+                    <Spinner
+                        android:id="@+id/studentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_2dp" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:text="First name:"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+                <EditText
+                    android:id="@+id/admFirstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp48"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="@dimen/margin_8dp"
+                    android:gravity="start|center"
+                    android:hint="First name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/whiteColor"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/border_1dp"
+                    android:background="@color/light_grey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:text="Last name:"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+                <EditText
+                    android:id="@+id/admLastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp48"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="@dimen/margin_8dp"
+                    android:gravity="start|center"
+                    android:hint="Last name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/whiteColor"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/border_1dp"
+                    android:background="@color/light_grey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:text="Sex:"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+                <RadioGroup
+                    android:id="@+id/admSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/admSexMale"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="Male"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_20sp" />
+
+                    <RadioButton
+                        android:id="@+id/admSexFemale"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="Female"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_20sp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:text="UPN:"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+                <EditText
+                    android:id="@+id/admUPN"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp48"
+                    android:background="@null"
+                    android:gravity="start|center"
+                    android:hint="Enter UPN"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/whiteColor"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/border_1dp"
+                    android:background="@color/light_grey" />
+
+                <Button
+                    android:id="@+id/admUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_36dp"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:background="@drawable/btn_border_white"
+                    android:foreground="@drawable/my_ripple"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+                <Button
+                    android:id="@+id/admAddAsNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_36dp"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:background="@drawable/btn_border_white2"
+                    android:foreground="@drawable/my_ripple"
+                    android:text="Add As New"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_36dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/btn_border_grey"
+                android:gravity="center"
+                android:text="== Statistics =="
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_size_22sp" />
+
+            <LinearLayout
+                android:id="@+id/adminclasses_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:text="Schools/classes list:"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/txt_size_20sp" />
+
+                <Spinner
+                    android:id="@+id/adminClassesList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Term:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/readingTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/readingTerm1"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="1"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_24sp" />
+
+                    <RadioButton
+                        android:id="@+id/readingTerm2"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="2"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_24sp" />
+
+                    <RadioButton
+                        android:id="@+id/readingTerm3"
+                        style="@style/myRadioStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin_4dp"
+                        android:text="3"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/txt_size_24sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Phonics results recorded / total number of students:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admResultsCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Average phonics score:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admAveragePhonicsScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Average comprehension score:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admAverageCompScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Average overall score:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admOverallScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Maths results recorded / total number of students:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admMathsResultsCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot1m"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Average numbers score:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admAverageNumbersScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot2m"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Average word problems score:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admAverageWordProblemsScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot3m"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="Average overall maths score:"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <TextView
+                android:id="@+id/admOverallMathsScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:background="@drawable/btn_border_grey"
+                android:paddingStart="@dimen/margin_8dp"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/txt_size_20sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/plot4m"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/whiteColor"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

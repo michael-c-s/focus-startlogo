@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AssessByPhone</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="scanning">Scanning for devices…</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="none_found">No devices found</string>
+    <string name="connectBTPrinter">Connect Bluetooth Printer</string>
+    <string name="btnSend">Print</string>
+    <string name="btnClose">Close</string>
+    <string name="txt_content">""</string>
+    <string name="menu_settings">set</string>
+    <string name="strLang">en</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="getting_template">Downloading the latest template. Please wait…</string>
+    <string name="err_getting_template">There was a problem downloading the latest template</string>
+    <string name="try_get_template_again">Try again</string>
+    <string name="proceed_with_cached_template">Or, proceed with the saved template</string>
+    <string name="choose_assessmentOrStory">Choose template type</string>
+    <string name="choose_story">Choose story</string>
+    <string name="admin">* Results Admin</string>
+    <string name="choose_assessment">Choose assessment</string>
+    <string name="no_assessments">No assessments available</string>
+    <string name="getting_banks">Downloading the latest banks. Please wait…</string>
+    <string name="err_getting_banks">There was a problem downloading the latest banks</string>
+    <string name="try_get_banks_again">Try again</string>
+    <string name="proceed_with_cached_banks">Or, proceed with the saved banks</string>
+    <string name="err_timeout">Timeout error connecting to server</string>
+    <string name="assessment">Item to print:</string>
+    <string name="btnRerandomize">Randomize assessment</string>
+    <string name="btnDoAnotherAssessment">Go to Choose Assessment menu</string>
+    <string name="btnRecordResults">Record results</string>
+
+    <string name="warranty">Warranty Information: This software is provided AS IS and the author makes NO WARRANTY or representation either express or implied as to its quality, accuracy, or fitness for a particular purpose.</string>
+    <string name="warranty_short">This software is provided AS IS and the author makes NO WARRANTY or representation either express or implied as to its quality, accuracy, or fitness for a particular purpose.</string>
+
+    <!-- Basic Stuff -->
+    <string name="newFileName">Untitled</string>
+    <string name="onSaveMessage">File saved.</string>
+    <string name="onListCleared">List of recent files cleared.</string>
+    <string name="onSuggestionsCleared">List of recent searches cleared.</string>
+
+    <string name="newFile">New File</string>
+    <string name="openFile">Open File</string>
+
+    <string name="openRecent">Open a Recent File</string>
+
+    <!-- Search stuff -->
+    <string name="searchLabel">TextEdit</string>
+    <string name="searchHint">Search file</string>
+
+    <!-- Dialog Texts -->
+    <string name="defaultFilePath">/sdcard/</string>
+    <string name="accessDenied">Could not save file, Access Denied!</string>
+    <string name="accessDeniedSDcard">Error saving to SD card.\nPossible causes:\n - Phone connected to PC\n - Invalid file name\n - SD card not installed\n - Out of disk space</string>
+    <string name="savingError">Problem saving.\nPossible causes:\n - Invalid file name\n - Out of disk space</string>
+
+    <string name="shouldSave">File changed. Save it?</string>
+    <string name="shouldSaveIntent">You\'re opening another file. Save this one?</string>
+    <string name="shouldOverwrite">You\'re about to replace an existing file.</string>
+
+    <string name="onSendEmptyMessage">Can not send an empty untitled file.</string>
+    <string name="externalModify">This file has been modified externally. Reload?</string>
+
+    <!-- Preference stuff
+            If you edit this stuff you need to change updateOptions() to make it match -->
+    <!--  	<string name="linewrap">true</string>
+        <string name="autocase">true</string>
+        -->
+    <!--  File Browser stuff -->
+    <string name="nofilesindirectory">This directory is empty.</string>
+
+    <!-- Backendless stuff -->
+
+    <string name="login_success_message">Login successful! This concludes an example.</string>
+    <string name="login_text">Log in</string>
+    <string name="logout_text">Log out</string>
+
+    <string name="register_text">Register</string>
+    <string name="restore_link">restore</string>
+    <string name="password_recovered_message">We sent an email to your email address with a link to a password change page. Please check your email and follow the link for further instructions.</string>
+    <string name="restore_password_page_name">Password Restoration</string>
+    <string name="registration_page_name">Registration</string>
+    <string name="login_prompt">UTN:</string>
+    <string name="password_prompt">Password:</string>
+    <string name="password_recovery_page_name">Password Recovery</string>
+    <string name="warning_icon_description">warning icon</string>
+    <string name="remember_login_text">Remember me</string>
+
+    <string name="email_field_prompt">Email:</string>
+
+    <string name="name_field_prompt">Name:</string>
+
+    <string name="password_field_prompt">Password:</string>
+
+    <string name="utn_field_prompt">Utn:</string>
+
+    <string name="default_registered_text">Registered successfully!</string>
+
+    <string name="registration_success_message">Thank you for registering with the %1$s. Click the button below to proceed to the login.</string>
+
+    <!--    <string name="phonicsTotalScore">PHONICS SUBTOTAL: </string>-->
+    <!--    <string name="comphrensionTotalScore">COMPREHENSION SUBTOTAL: </string>-->
+    <!--    <string name="overallTotalScore">OVERALL TOTAL: </string>-->
+
+    <!--    <string name="numbers_subtotal">NUMBERS SUBTOTAL: </string>-->
+    <!--    <string name="words_subtotal">WORDS SUBTOTAL: </string>-->
+    <!--    <string name="overall_total">OVERALL TOTAL: </string>-->
+
+    <string name="phonicsTotalScore">Phonics Subtotal: </string>
+    <string name="comphrensionTotalScore">Comprehension Subtotal: </string>
+    <string name="overallTotalScore">Overall Total: </string>
+
+    <string name="numbers_subtotal">Numbers Subtotal: </string>
+    <string name="words_subtotal">Words Subtotal: </string>
+    <string name="overall_total">Overall Total: </string>
+
+    <string name="term1locked">Results for term 1 have already been locked down sorry.</string>
+    <string name="term2locked">Results for term 2 have already been locked down sorry.</string>
+    <string name="term3locked">Results for term 3 have already been locked down sorry.</string>
+    <string name="nuLL">N</string>
+
+</resources>

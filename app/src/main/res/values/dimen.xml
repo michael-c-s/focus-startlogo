@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bank_height">270dp</dimen>
+    <dimen name="bank_width">200dp</dimen>
+    <dimen name="bank_width_questions">500dp</dimen>
+    <dimen name="bank_width_stories">1900dp</dimen>
+    <dimen name="tfont_size">35dp</dimen>
+    <dimen name="tfont_size_ack">45dp</dimen>
+    <dimen name="tfont_size_story4lines">55dp</dimen>
+    <dimen name="tfont_size_story2or3lines">80dp</dimen>
+
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+    <dimen name="text_micro">12sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_large">22sp</dimen>
+    <dimen name="dp96">96dp</dimen>
+    <dimen name="dp144">144dp</dimen>
+    <dimen name="dp192">192dp</dimen>
+
+    <dimen name="border_1dp">1dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_6dp">6dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_22dp">22dp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_26dp">26dp</dimen>
+    <dimen name="margin_28dp">28dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="margin_36dp">36dp</dimen>
+    <dimen name="margin_48dp">48dp</dimen>
+    <dimen name="margin_56dp">56dp</dimen>
+    <dimen name="margin_72dp">72dp</dimen>
+    <dimen name="margin_85dp">85dp</dimen>
+    <dimen name="margin_95dp">95dp</dimen>
+    <dimen name="margin_96dp">96dp</dimen>
+    <dimen name="margin_112dp">112dp</dimen>
+
+    <dimen name="txt_size_10sp">10sp</dimen>
+    <dimen name="txt_size_12sp">12sp</dimen>
+    <dimen name="txt_size_13sp">13sp</dimen>
+    <dimen name="txt_size_14sp">14sp</dimen>
+    <dimen name="txt_size_16sp">16sp</dimen>
+    <dimen name="txt_size_18sp">18sp</dimen>
+    <dimen name="txt_size_20sp">20sp</dimen>
+    <dimen name="txt_size_22sp">22sp</dimen>
+    <dimen name="txt_size_24sp">24sp</dimen>
+    <dimen name="txt_size_30sp">30sp</dimen>
+    <dimen name="txt_size_32sp">32sp</dimen>
+    <dimen name="txt_size_36sp">36sp</dimen>
+    <dimen name="txt_size_56sp">56sp</dimen>
+    <dimen name="txt_size_80sp">80sp</dimen>
+
+</resources>
